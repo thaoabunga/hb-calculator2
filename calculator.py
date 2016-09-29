@@ -9,13 +9,14 @@ from arithmetic import *
 
 
 # Your code goes here
+
 while True: 
 
 	user_input = raw_input('>: ')
 	tokens = user_input.split(' ')
-
+	
 	if tokens[0] == '+':
-		print add(int(tokens[1]), int(tokens[2]))
+		print reduce(add, tokens[1:])
 
 	if tokens[0] == '-':
 		print subtract(int(tokens[1]), int(tokens[2]))
@@ -39,4 +40,5 @@ while True:
 		print mod(int(tokens[1]), int(tokens[2]))
 
 	if tokens[0] == 'q':
+
 		break
